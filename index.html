@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DadosBET — La Suerte Está de Tu Lado | Bono Registro</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700;1,900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-main: #0a0b0e;
+      --bg-header: #12141a;
+      --bg-card: #151821;
+      --orange: #ff6810;
+      --yellow: #ffc400;
+      --green: #00ef78;
+      --green-glow: rgba(0, 239, 120, 0.45);
+      --cream: #ffffff;
+      --text-muted: #9ba3af;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-main);
+      color: var(--cream);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* CAMADA DE FUNDO A 50% DE OPACIDADE */
+    .bg-layer {
+      position: fixed;
+      inset: 0;
+      background: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhIXsowrVowxOu4M3yL_js1WaRCvNTGwgOWmdttsI8bGBwKTMpOYK1uq9RWY__lJ4v95-ueitAPieSqZzMvd1MzvW9sx3uu7RNyLcnKwH3fRYP9vd96QIOyUZoTiBGanNxFx2a0h8Ih3Xi3yY38Z4SM5-pfD0mVwHoE53N0Yny1PSwjD6mYyFL3LKsJDaM/s1600/Gates%20of%20Olympus%202500_5000x1998_Super%20Freespin.png') no-repeat center center;
+      background-size: cover;
+      opacity: 0.5;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* BARRA SUPERIOR */
+    .casino-header {
+      background: rgba(18, 20, 26, 0.95);
+      backdrop-filter: blur(10px);
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #1f232e;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.7);
+    }
+
+    .brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .brand-logo {
+      font-size: 24px;
+      font-weight: 900;
+      font-style: italic;
+      color: #fff;
+      letter-spacing: -0.05em;
+    }
+
+    .brand-logo span {
+      color: var(--orange);
+    }
+
+    .brand-slogan {
+      font-size: 8.5px;
+      color: var(--yellow);
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      display: block;
+      margin-top: -3px;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-top-reg {
+      padding: 8px 16px;
+      background: var(--yellow);
+      border: none;
+      border-radius: 6px;
+      color: #121011;
+      font-size: 11px;
+      font-weight: 900;
+      text-transform: uppercase;
+      cursor: pointer;
+      box-shadow: 0 0 12px rgba(255, 196, 0, 0.4);
+      transition: transform 0.2s;
+    }
+
+    .btn-top-reg:hover {
+      transform: translateY(-2px);
+    }
+
+    .flag-arg {
+      width: 22px;
+      height: 15px;
+      border-radius: 3px;
+      object-fit: cover;
+    }
+
+    /* CONTAINER HERO */
+    .hero-section {
+      width: 100%;
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 30px 20px 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* BANNER PRINCIPAL */
+    .banner-holder {
+      width: 100%;
+      max-width: 680px;
+      margin: 0 auto 30px;
+      background: radial-gradient(circle at 50% 50%, rgba(255, 104, 16, 0.25) 0%, rgba(20, 16, 24, 0.95) 100%);
+      border-radius: 18px;
+      padding: 10px;
+      border: 1.5px solid rgba(255, 104, 16, 0.45);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8), 0 0 35px rgba(255, 104, 16, 0.25);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .banner-holder img {
+      width: 100%;
+      height: auto;
+      max-height: 220px;
+      object-fit: contain;
+      display: block;
+      filter: drop-shadow(0 6px 14px rgba(0,0,0,0.8));
+    }
+
+    /* CARD DE CONVERSÃO */
+    .casino-panel {
+      background: linear-gradient(165deg, rgba(22, 25, 34, 0.95) 0%, rgba(14, 16, 21, 0.98) 100%);
+      border: 1.5px solid rgba(255, 196, 0, 0.35);
+      border-radius: 20px;
+      padding: 32px 28px;
+      max-width: 540px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9);
+      margin-bottom: 40px;
+      backdrop-filter: blur(8px);
+    }
+
+    .casino-panel h1 {
+      font-size: 24px;
+      font-weight: 900;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      line-height: 1.25;
+    }
+
+    .casino-panel h1 span {
+      color: var(--yellow);
+      text-shadow: 0 0 16px rgba(255, 196, 0, 0.4);
+    }
+
+    .casino-panel p.sub {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 22px;
+    }
+
+    /* CHECKBOX +18 */
+    .checkbox-box {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-align: left;
+      margin-bottom: 22px;
+      padding: 14px 16px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1.5px solid rgba(255, 196, 0, 0.4);
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .checkbox-box:hover {
+      background: rgba(255, 255, 255, 0.07);
+      border-color: var(--yellow);
+    }
+
+    .checkbox-box input[type="checkbox"] {
+      width: 22px;
+      height: 22px;
+      accent-color: var(--green);
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    .checkbox-box label {
+      font-size: 13px;
+      font-weight: 700;
+      color: #fff;
+      cursor: pointer;
+      line-height: 1.4;
+    }
+
+    /* BOTÕES */
+    .action-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .btn-flow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 16px 14px;
+      border-radius: 12px;
+      font-size: 14.5px;
+      font-weight: 900;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: transform 0.2s, filter 0.2s;
+    }
+
+    .btn-flow:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.1);
+    }
+
+    .btn-site-primary {
+      background: var(--green);
+      color: #072210;
+      box-shadow: 0 4px 20px var(--green-glow);
+    }
+
+    .btn-telegram-flow {
+      background: #2AABEE;
+      color: #fff;
+      box-shadow: 0 4px 18px rgba(42, 171, 238, 0.4);
+    }
+
+    .btn-telegram-flow span.extra {
+      display: block;
+      font-size: 11px;
+      font-weight: 800;
+      color: #fff9ec;
+      letter-spacing: 0.03em;
+    }
+
+    .btn-whatsapp-flow {
+      background: #25D366;
+      color: #052a12;
+      box-shadow: 0 4px 18px rgba(37, 211, 102, 0.4);
+    }
+
+    /* SLOTS */
+    .slots-header {
+      width: 100%;
+      font-size: 15px;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #e2e8f0;
+      border-left: 3px solid var(--orange);
+      padding-left: 10px;
+    }
+
+    .slots-grid {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .slot-card {
+      background: rgba(21, 24, 33, 0.95);
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1.5px solid #222736;
+      transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+    }
+
+    .slot-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--yellow);
+      box-shadow: 0 15px 30px rgba(255, 196, 0, 0.25);
+    }
+
+    .slot-card img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      display: block;
+      background: #0d0f14;
+    }
+
+    .slot-details {
+      padding: 12px 10px;
+      text-align: center;
+      background: linear-gradient(180deg, #161922 0%, #101218 100%);
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .slot-details h3 {
+      font-size: 13px;
+      font-weight: 800;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: #fff;
+    }
+
+    .slot-details span {
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--orange);
+      text-transform: uppercase;
+      margin-top: 3px;
+      display: block;
+    }
+
+    /* FOOTER */
+    .footer-strip {
+      background: #0a0b0d;
+      border-top: 3px solid var(--yellow);
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .age-badge {
+      width: 38px;
+      height: 38px;
+      border: 2px solid var(--yellow);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      color: var(--yellow);
+      font-size: 13px;
+    }
+
+    @media (max-width: 900px) {
+      .slots-grid { grid-template-columns: repeat(2, 1fr); }
+      .banner-holder { padding: 8px; }
+    }
+
+    @media (max-width: 480px) {
+      .slots-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- FUNDO A 50% -->
+  <div class="bg-layer"></div>
+
+  <!-- HEADER -->
+  <header class="casino-header">
+    <a href="https://www.dbapuesta.com/" class="brand-wrap">
+      <div>
+        <div class="brand-logo">DADOS<span>BET</span></div>
+        <span class="brand-slogan">LA SUERTE ESTÁ DE TU LADO</span>
+      </div>
+    </a>
+
+    <div class="header-actions">
+      <button class="btn-top-reg" onclick="irAlSitio()">REGISTRO</button>
+      <img src="https://flagcdn.com/w40/ar.png" alt="Argentina" class="flag-arg">
+    </div>
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="hero-section">
+
+    <!-- BANNER TOPO -->
+    <div class="banner-holder">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg1LLiJW-Eu9YbRd2mvZCs3I5DldRIHvNuv_YJQnw8EYm0GGRy177w0gJ9FkfTuKcgP_dbZY8G0dUw-EP4byiPXTa7a7eioOJFKEmUyt8OSei-BK7uhvt5N5XXzXHhq9Be4Ca_r6Ajt3_VwQ-zk6KNAKCwh0r5A9hNPiggiHkTuZK0apRhdZFM_GMALiyE/s1600/BONO%20REGISTRO.png" alt="Bono Registro DadosBET">
+    </div>
+
+    <!-- PAINEL DE CONVERSÃO -->
+    <div class="casino-panel">
+      <h1>ACTIVÁ TU <span>BONO 100%</span> + <span>100 GIROS</span></h1>
+      <p class="sub">
+        Confirmá que sos mayor de 18 años y seleccioná tu opción favorita para acreditar tu beneficio exclusivo en tu primera carga.
+      </p>
+
+      <!-- CHECKBOX +18 -->
+      <div class="checkbox-box" id="checkboxBox">
+        <input type="checkbox" id="checkAge">
+        <label for="checkAge">Confirmo que soy mayor de 18 años para acceder a los beneficios.</label>
+      </div>
+
+      <!-- BOTÕES -->
+      <div class="action-buttons">
+        <!-- 1: REGISTRO DIRETO NO SITE (SEM MODAL DE EMAIL) -->
+        <button type="button" class="btn-flow btn-site-primary" id="btnSiteDirect">
+          🎰 1. REGISTRARSE EN EL SITIO WEB
+        </button>
+
+        <!-- 2: TELEGRAM -->
+        <a href="https://t.me/Dadosbet1?text=%C2%A1Hola!%20%F0%9F%99%8B%E2%80%8D%E2%99%82%EF%B8%8F%20Vengo%20por%20una%20red%20social%20oficial%20de%20Dadosbet%20%F0%9F%93%B1%F0%9F%91%A8%E2%80%8D%F0%9F%92%BC%20y%20quiero%20reclamar%20mi%20bono%20del%20100%25%20%F0%9F%8E%81%20%2B%20100%20giros%20gratis%20%F0%9F%8E%B0%F0%9F%94%A5" 
+           target="_blank" rel="noopener noreferrer" 
+           class="btn-flow btn-telegram-flow" id="btnTelegram">
+          <div>
+            ✈️ 2. ATENCIÓN POR TELEGRAM
+            <span class="extra">(+10% EXTRA EN TODAS TUS CARGAS)</span>
+          </div>
+        </a>
+
+        <!-- 3: WHATSAPP -->
+        <a href="https://wa.me/5491125135407?text=%C2%A1Hola!%20%F0%9F%99%8B%E2%80%8D%E2%99%82%EF%B8%8F%20Vengo%20por%20una%20red%20social%20oficial%20de%20Dadosbet%20%F0%9F%93%B1%F0%9F%91%A8%E2%80%8D%F0%9F%92%BC%20y%20quiero%20reclamar%20mi%20bono%20del%20100%25%20%F0%9F%8E%81%20%2B%20100%20giros%20gratis%20%F0%9F%8E%B0%F0%9F%94%A5" 
+           target="_blank" rel="noopener noreferrer" 
+           class="btn-flow btn-whatsapp-flow" id="btnWhatsapp">
+          💬 3. CONTACTAR POR WHATSAPP
+        </a>
+      </div>
+    </div>
+
+    <!-- GRADE DE 4 JOGOS -->
+    <div class="slots-header">
+      🎰 SLOTS POPULARES EN ARGENTINA
+    </div>
+
+    <div class="slots-grid">
+      <!-- JOGO 1: BIG BASS BLAST -->
+      <div class="slot-card" onclick="irAlSitio()">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhuhstSJMEj4Mkd0UHOmvBlsq1LX9ON1k7FwUdb9T1FJi_SAtbG73QWj9aMG0WGe5oePvO3sIJe2RpAYPVmCXQYD614L-Vb6oXmb2PZX5o3MqDDRx1rooJrSIbUNAXTFIODI3HMZBK8JbvlZ7dNClkV1jjiH5iowGeOPIUYZpXKxzIbzTRHOflRJWJpdXY/w516-h343/Big%20Bass%20Blast_1200x800.webp" alt="Big Bass Blast">
+        <div class="slot-details">
+          <h3>Big Bass Blast</h3>
+          <span>PRAGMATIC PLAY</span>
+        </div>
+      </div>
+
+      <!-- JOGO 2: GATES OF OLYMPUS 2500 -->
+      <div class="slot-card" onclick="irAlSitio()">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiRoBAiYoTh5NbREpJUVcCi1ctdJ2M6NH0MdIiRSVaBON7eB7xKOrj82tWzoD4Hf0FLfRvYLPnk20Z3Sdw5rxWgPJuHj_vQ4bdN7ZWPoM7IqEnzbg0Sb1bNOLE1CUN7RnOIx5b80OMQmxswyWzcnwnuJGmGPNJZlOhI5RfyYuULHHbk9u0oiaAiDsQasew/w501-h376/Gates%20of%20Olympus%202500_712x534.png" alt="Gates of Olympus 2500">
+        <div class="slot-details">
+          <h3>Gates of Olympus 2500</h3>
+          <span>PRAGMATIC PLAY</span>
+        </div>
+      </div>
+
+      <!-- JOGO 3: LUXOR OF CLEOPATRA -->
+      <div class="slot-card" onclick="irAlSitio()">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjFeW-kxjZzYgr2_ky09Ap0MS2h4IUK23dFKtnK6sUnK08CVNBymTguEFWeXFGO2bIaidiJWpzX9yOA-3jNNAidjNESLYtAMKMn1igh3mCjyKF0TxqAuJuLp6G_SfDrhz1rlcpxq7vAC9LWxfZAuMHEpFB8qstvOcB4gt5g4fuQhCyAQDFjYbEJnjuUA60/w499-h332/Luxor%20of%20Cleopatra_1200x800.webp" alt="Luxor of Cleopatra">
+        <div class="slot-details">
+          <h3>Luxor of Cleopatra</h3>
+          <span>PRAGMATIC PLAY</span>
+        </div>
+      </div>
+
+      <!-- JOGO 4: THE DOG HOUSE MEGAWAYS 1000 -->
+      <div class="slot-card" onclick="irAlSitio()">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgb1XENrRhyphenhyphenk1w1OehonkSI5CdpI37XV5ut0EptZyDefajJ3XJm2MF6cR7slYuQ567EjvPA1LT1JSxrbZsR6vcuk8vCHeV-QV2HYS0h0l_DAw9Ysk8lnAuJaFxlXSymHPqYqxykmqnpW7Kqq6JfqfQ8NuY6wyJ0PCDvZI_h5xZuoL_-eJ7jJiRDiUjqztk/w514-h386/The%20Dog%20House%20Megaways%201000_800x600.jpg" alt="The Dog House Megaways 1000">
+        <div class="slot-details">
+          <h3>The Dog House Megaways 1000</h3>
+          <span>PRAGMATIC PLAY</span>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer-strip">
+    <div class="age-badge">18+</div>
+    <div>DadosBET © Todos los derechos reservados. Jugá con responsabilidad.</div>
+    <div style="font-weight: 900; color: #fff;">DADOS<span style="color:var(--orange);">BET</span></div>
+  </footer>
+
+  <script>
+    const TARGET_SITE_URL = "https://www.dbapuesta.com/";
+
+    const checkAge = document.getElementById("checkAge");
+    const checkboxBox = document.getElementById("checkboxBox");
+
+    const btnSiteDirect = document.getElementById("btnSiteDirect");
+    const btnTelegram = document.getElementById("btnTelegram");
+    const btnWhatsapp = document.getElementById("btnWhatsapp");
+
+    function validarIdade() {
+      if (!checkAge.checked) {
+        checkboxBox.style.borderColor = "var(--orange)";
+        checkboxBox.style.background = "rgba(255, 104, 16, 0.15)";
+        alert("⚠️ Por favor, confirmá la casilla de que sos mayor de 18 años para continuar.");
+        return false;
+      }
+      return true;
+    }
+
+    function irAlSitio() {
+      if (validarIdade()) {
+        window.location.href = TARGET_SITE_URL;
+      }
+    }
+
+    // Botão de registro direto no site
+    btnSiteDirect.addEventListener("click", irAlSitio);
+
+    // Validações nos botões de Telegram e WhatsApp
+    btnTelegram.addEventListener("click", (e) => {
+      if (!validarIdade()) e.preventDefault();
+    });
+
+    btnWhatsapp.addEventListener("click", (e) => {
+      if (!validarIdade()) e.preventDefault();
+    });
+  </script>
+</body>
+</html>
